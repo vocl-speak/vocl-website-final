@@ -83,75 +83,69 @@
                 <div class="hero-visual">
                     <div class="product-showcase">
                         <div class="device-illustration">
-                            <svg viewBox="0 0 400 340" class="device-svg" aria-hidden="true">
-                                <!-- Front-facing skull with accurate electrode positions -->
+                            <svg viewBox="0 0 420 320" class="device-svg" aria-hidden="true">
+                                <!-- Clean electrode visualization -->
                                 <defs>
                                     <linearGradient id="signalGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                                         <stop offset="0%" style="stop-color:#0066cc;stop-opacity:0.2" />
-                                        <stop offset="50%" style="stop-color:#0066cc;stop-opacity:0.8" />
+                                        <stop offset="50%" style="stop-color:#0066cc;stop-opacity:1" />
                                         <stop offset="100%" style="stop-color:#0066cc;stop-opacity:0.2" />
                                     </linearGradient>
+                                    <filter id="glow">
+                                        <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                                        <feMerge>
+                                            <feMergeNode in="coloredBlur"/>
+                                            <feMergeNode in="SourceGraphic"/>
+                                        </feMerge>
+                                    </filter>
                                 </defs>
                                 
-                                <!-- Skull outline - front view -->
-                                <path d="M200 30 
-                                         C280 30 330 90 330 150 
-                                         C330 190 320 220 300 245
-                                         L290 260
-                                         C280 275 260 290 240 295
-                                         L200 300
-                                         L160 295
-                                         C140 290 120 275 110 260
-                                         L100 245
-                                         C80 220 70 190 70 150 
-                                         C70 90 120 30 200 30Z" 
-                                      fill="none" stroke="#1a1a2e" stroke-width="2" opacity="0.4"/>
-                                
-                                <!-- Eye sockets -->
-                                <ellipse cx="145" cy="130" rx="35" ry="28" fill="none" stroke="#1a1a2e" stroke-width="1.5" opacity="0.3"/>
-                                <ellipse cx="255" cy="130" rx="35" ry="28" fill="none" stroke="#1a1a2e" stroke-width="1.5" opacity="0.3"/>
-                                
-                                <!-- Nose -->
-                                <path d="M200 145 L200 185 M185 190 Q200 200 215 190" fill="none" stroke="#1a1a2e" stroke-width="1.5" opacity="0.3"/>
-                                
-                                <!-- Teeth/jaw line -->
-                                <path d="M150 230 Q175 220 200 220 Q225 220 250 230" fill="none" stroke="#1a1a2e" stroke-width="1.5" opacity="0.3"/>
-                                <path d="M155 245 Q175 255 200 255 Q225 255 245 245" fill="none" stroke="#1a1a2e" stroke-width="1.5" opacity="0.3"/>
+                                <!-- Simple head outline - no facial features -->
+                                <path d="M200 25 
+                                         C290 25 340 100 340 170 
+                                         C340 220 320 255 295 280
+                                         C270 305 240 315 200 315
+                                         C160 315 130 305 105 280
+                                         C80 255 60 220 60 170 
+                                         C60 100 110 25 200 25Z" 
+                                      fill="none" stroke="#1a1a2e" stroke-width="2" opacity="0.25"/>
                                 
                                 <!-- Electrode positions - matching actual placement -->
-                                <g class="electrodes">
-                                    <!-- Orbicularis oris superior (2 electrodes on upper lip) -->
-                                    <circle cx="170" cy="210" r="9" fill="none" stroke="#e07060" stroke-width="3" class="electrode e1"/>
-                                    <circle cx="230" cy="210" r="9" fill="none" stroke="#e07060" stroke-width="3" class="electrode e2"/>
+                                <g class="electrodes" filter="url(#glow)">
+                                    <!-- Orbicularis oris superior (2 electrodes) -->
+                                    <circle cx="165" cy="195" r="10" fill="#0066cc" class="electrode e1"/>
+                                    <circle cx="235" cy="195" r="10" fill="#0066cc" class="electrode e2"/>
                                     
-                                    <!-- Orbicularis oris inferior (2 electrodes below lower lip corners) -->
-                                    <circle cx="160" cy="248" r="9" fill="none" stroke="#e07060" stroke-width="3" class="electrode e3"/>
-                                    <circle cx="200" cy="252" r="9" fill="none" stroke="#e07060" stroke-width="3" class="electrode e4"/>
+                                    <!-- Orbicularis oris inferior (2 electrodes) -->
+                                    <circle cx="155" cy="235" r="10" fill="#0066cc" class="electrode e3"/>
+                                    <circle cx="200" cy="242" r="10" fill="#0066cc" class="electrode e4"/>
                                     
-                                    <!-- Depressor labii inferioris (1 electrode on right side) -->
-                                    <circle cx="240" cy="248" r="9" fill="none" stroke="#e07060" stroke-width="3" class="electrode e5"/>
+                                    <!-- Depressor labii inferioris -->
+                                    <circle cx="245" cy="235" r="10" fill="#0066cc" class="electrode e5"/>
                                     
-                                    <!-- Platysma (1 electrode on chin) -->
-                                    <circle cx="200" cy="285" r="9" fill="none" stroke="#e07060" stroke-width="3" class="electrode e6"/>
+                                    <!-- Platysma -->
+                                    <circle cx="200" cy="280" r="10" fill="#0066cc" class="electrode e6"/>
                                 </g>
                                 
-                                <!-- Labels -->
-                                <g class="electrode-labels" font-size="10" fill="#1a1a2e" opacity="0.7">
-                                    <text x="95" y="213" text-anchor="end">Orbicularis oris superior</text>
-                                    <line x1="98" y1="210" x2="160" y2="210" stroke="#1a1a2e" stroke-width="1" opacity="0.3"/>
-                                    
-                                    <text x="95" y="251" text-anchor="end">Orbicularis oris inferior</text>
-                                    <line x1="98" y1="248" x2="150" y2="248" stroke="#1a1a2e" stroke-width="1" opacity="0.3"/>
-                                    
-                                    <text x="305" y="251" text-anchor="start">Depressor labii inferioris</text>
-                                    <line x1="250" y1="248" x2="302" y2="248" stroke="#1a1a2e" stroke-width="1" opacity="0.3"/>
-                                    
-                                    <text x="200" y="315" text-anchor="middle">Platysma</text>
-                                    <line x1="200" y1="295" x2="200" y2="305" stroke="#1a1a2e" stroke-width="1" opacity="0.3"/>
+                                <!-- Signal waves emanating from electrodes -->
+                                <g class="signal-lines">
+                                    <path d="M265 195 Q290 195 305 185 Q320 175 335 190 Q350 205 365 190 Q380 175 395 190" 
+                                          fill="none" stroke="url(#signalGradient)" stroke-width="2.5" class="signal s1"/>
+                                    <path d="M265 235 Q290 235 305 225 Q320 215 335 230 Q350 245 365 230 Q380 215 395 230" 
+                                          fill="none" stroke="url(#signalGradient)" stroke-width="2.5" class="signal s2"/>
+                                    <path d="M220 280 Q245 280 260 270 Q275 260 290 275 Q305 290 320 275 Q335 260 350 275" 
+                                          fill="none" stroke="url(#signalGradient)" stroke-width="2.5" class="signal s3"/>
+                                </g>
+                                
+                                <!-- Minimal labels -->
+                                <g class="electrode-labels" font-size="11" fill="#1a1a2e" opacity="0.6">
+                                    <text x="55" y="198">Upper lip</text>
+                                    <text x="55" y="238">Lower lip</text>
+                                    <text x="200" y="310" text-anchor="middle">Chin</text>
                                 </g>
                             </svg>
                         </div>
-                        <p class="device-caption">8-channel facial EMG electrode placement</p>
+                        <p class="device-caption">6 electrodes targeting speech muscles</p>
                     </div>
                 </div>
             </div>
@@ -253,50 +247,6 @@
                     <div class="insight-content">
                         <h3>Why EMG?</h3>
                         <p>EMG signals from attempted speech are <strong>3-5× stronger</strong> than imagined speech signals—rendering brain surgery obsolete while delivering natural, non-invasive communication.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Interactive Demo Portal -->
-        <section class="demo-portal" id="demo" aria-labelledby="demo-heading">
-            <div class="container">
-                <div class="demo-header">
-                    <h2 id="demo-heading" class="section-title">Experience VOCL</h2>
-                    <p class="section-intro">This interactive demonstration simulates the VOCL experience. Build phoneme sequences through subvocalization patterns, then visualize real-world EMG signals captured from actual users.</p>
-                </div>
-                
-                <div class="demo-container">
-                    <div class="demo-frame-wrapper">
-                        <div class="demo-frame-header">
-                            <div class="demo-status">
-                                <span class="status-dot"></span>
-                                <span>Live Demo</span>
-                            </div>
-                            <span class="demo-badge">Interactive</span>
-                        </div>
-                        <iframe 
-                            src="https://voclspeak.streamlit.app/?embedded=true" 
-                            class="demo-iframe"
-                            title="VOCL Interactive Demo - Phoneme Recognition Simulator"
-                            allow="clipboard-write"
-                            loading="lazy">
-                        </iframe>
-                    </div>
-                    
-                    <div class="demo-sidebar">
-                        <div class="demo-info-card">
-                            <h3>What You're Seeing</h3>
-                            <p>Each phoneme represents distinct muscle activation patterns that VOCL learns to recognize and translate into speech.</p>
-                        </div>
-                        <div class="demo-info-card">
-                            <h3>Real EMG Data</h3>
-                            <p>The signal visualizations are captured from actual users during subvocalization attempts—the same data our ML models train on.</p>
-                        </div>
-                        <div class="demo-info-card">
-                            <h3>Try It</h3>
-                            <p>Select phonemes to see their unique EMG signatures. Notice how different sounds produce distinct waveform patterns.</p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -443,6 +393,50 @@
                             <span>30-50%</span>
                             <span>N/A</span>
                             <span class="highlight">TBD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Demo Portal -->
+        <section class="demo-portal" id="demo" aria-labelledby="demo-heading">
+            <div class="container">
+                <div class="demo-header">
+                    <h2 id="demo-heading" class="section-title">Experience VOCL</h2>
+                    <p class="section-intro">This interactive demonstration simulates the VOCL experience. Build phoneme sequences through subvocalization patterns, then visualize real-world EMG signals captured from actual users.</p>
+                </div>
+                
+                <div class="demo-container">
+                    <div class="demo-frame-wrapper">
+                        <div class="demo-frame-header">
+                            <div class="demo-status">
+                                <span class="status-dot"></span>
+                                <span>Live Demo</span>
+                            </div>
+                            <span class="demo-badge">Interactive</span>
+                        </div>
+                        <iframe 
+                            src="https://voclspeak.streamlit.app/?embedded=true" 
+                            class="demo-iframe"
+                            title="VOCL Interactive Demo - Phoneme Recognition Simulator"
+                            allow="clipboard-write"
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                    
+                    <div class="demo-sidebar">
+                        <div class="demo-info-card">
+                            <h3>What You're Seeing</h3>
+                            <p>Each phoneme represents distinct muscle activation patterns that VOCL learns to recognize and translate into speech.</p>
+                        </div>
+                        <div class="demo-info-card">
+                            <h3>Real EMG Data</h3>
+                            <p>The signal visualizations are captured from actual users during subvocalization attempts—the same data our ML models train on.</p>
+                        </div>
+                        <div class="demo-info-card">
+                            <h3>Try It</h3>
+                            <p>Select phonemes to see their unique EMG signatures. Notice how different sounds produce distinct waveform patterns.</p>
                         </div>
                     </div>
                 </div>
