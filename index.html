@@ -83,8 +83,8 @@
                 <div class="hero-visual">
                     <div class="product-showcase">
                         <div class="device-illustration">
-                            <svg viewBox="0 0 400 300" class="device-svg" aria-hidden="true">
-                                <!-- Stylized head profile with electrode positions -->
+                            <svg viewBox="0 0 400 340" class="device-svg" aria-hidden="true">
+                                <!-- Front-facing skull with accurate electrode positions -->
                                 <defs>
                                     <linearGradient id="signalGradient" x1="0%" y1="0%" x2="100%" y2="0%">
                                         <stop offset="0%" style="stop-color:#0066cc;stop-opacity:0.2" />
@@ -93,37 +93,61 @@
                                     </linearGradient>
                                 </defs>
                                 
-                                <!-- Simplified head silhouette -->
-                                <path d="M200 40 C280 40 320 100 320 160 C320 200 300 240 260 260 L240 280 L160 280 L140 260 C100 240 80 200 80 160 C80 100 120 40 200 40" 
-                                      fill="none" stroke="#1a1a2e" stroke-width="2" opacity="0.3"/>
+                                <!-- Skull outline - front view -->
+                                <path d="M200 30 
+                                         C280 30 330 90 330 150 
+                                         C330 190 320 220 300 245
+                                         L290 260
+                                         C280 275 260 290 240 295
+                                         L200 300
+                                         L160 295
+                                         C140 290 120 275 110 260
+                                         L100 245
+                                         C80 220 70 190 70 150 
+                                         C70 90 120 30 200 30Z" 
+                                      fill="none" stroke="#1a1a2e" stroke-width="2" opacity="0.4"/>
                                 
-                                <!-- 8 Electrode positions - facial EMG locations -->
+                                <!-- Eye sockets -->
+                                <ellipse cx="145" cy="130" rx="35" ry="28" fill="none" stroke="#1a1a2e" stroke-width="1.5" opacity="0.3"/>
+                                <ellipse cx="255" cy="130" rx="35" ry="28" fill="none" stroke="#1a1a2e" stroke-width="1.5" opacity="0.3"/>
+                                
+                                <!-- Nose -->
+                                <path d="M200 145 L200 185 M185 190 Q200 200 215 190" fill="none" stroke="#1a1a2e" stroke-width="1.5" opacity="0.3"/>
+                                
+                                <!-- Teeth/jaw line -->
+                                <path d="M150 230 Q175 220 200 220 Q225 220 250 230" fill="none" stroke="#1a1a2e" stroke-width="1.5" opacity="0.3"/>
+                                <path d="M155 245 Q175 255 200 255 Q225 255 245 245" fill="none" stroke="#1a1a2e" stroke-width="1.5" opacity="0.3"/>
+                                
+                                <!-- Electrode positions - matching actual placement -->
                                 <g class="electrodes">
-                                    <!-- Orbicularis oris superior -->
-                                    <circle cx="170" cy="180" r="7" fill="#0066cc" class="electrode e1"/>
-                                    <circle cx="200" cy="175" r="7" fill="#0066cc" class="electrode e2"/>
-                                    <circle cx="230" cy="180" r="7" fill="#0066cc" class="electrode e3"/>
+                                    <!-- Orbicularis oris superior (2 electrodes on upper lip) -->
+                                    <circle cx="170" cy="210" r="9" fill="none" stroke="#e07060" stroke-width="3" class="electrode e1"/>
+                                    <circle cx="230" cy="210" r="9" fill="none" stroke="#e07060" stroke-width="3" class="electrode e2"/>
                                     
-                                    <!-- Orbicularis oris inferior -->
-                                    <circle cx="180" cy="210" r="7" fill="#0066cc" class="electrode e4"/>
-                                    <circle cx="220" cy="210" r="7" fill="#0066cc" class="electrode e5"/>
+                                    <!-- Orbicularis oris inferior (2 electrodes below lower lip corners) -->
+                                    <circle cx="160" cy="248" r="9" fill="none" stroke="#e07060" stroke-width="3" class="electrode e3"/>
+                                    <circle cx="200" cy="252" r="9" fill="none" stroke="#e07060" stroke-width="3" class="electrode e4"/>
                                     
-                                    <!-- Depressor labii inferioris -->
-                                    <circle cx="200" cy="235" r="7" fill="#0066cc" class="electrode e6"/>
+                                    <!-- Depressor labii inferioris (1 electrode on right side) -->
+                                    <circle cx="240" cy="248" r="9" fill="none" stroke="#e07060" stroke-width="3" class="electrode e5"/>
                                     
-                                    <!-- Reference electrodes - platysma -->
-                                    <circle cx="160" cy="265" r="6" fill="#0066cc" class="electrode e7" opacity="0.6"/>
-                                    <circle cx="240" cy="265" r="6" fill="#0066cc" class="electrode e8" opacity="0.6"/>
+                                    <!-- Platysma (1 electrode on chin) -->
+                                    <circle cx="200" cy="285" r="9" fill="none" stroke="#e07060" stroke-width="3" class="electrode e6"/>
                                 </g>
                                 
-                                <!-- Signal waves -->
-                                <g class="signal-lines">
-                                    <path d="M320 150 Q340 150 350 140 Q360 130 370 145 Q380 160 390 145" 
-                                          fill="none" stroke="url(#signalGradient)" stroke-width="2" class="signal s1"/>
-                                    <path d="M320 180 Q340 180 350 170 Q360 160 370 175 Q380 190 390 175" 
-                                          fill="none" stroke="url(#signalGradient)" stroke-width="2" class="signal s2"/>
-                                    <path d="M320 210 Q340 210 350 200 Q360 190 370 205 Q380 220 390 205" 
-                                          fill="none" stroke="url(#signalGradient)" stroke-width="2" class="signal s3"/>
+                                <!-- Labels -->
+                                <g class="electrode-labels" font-size="10" fill="#1a1a2e" opacity="0.7">
+                                    <text x="95" y="213" text-anchor="end">Orbicularis oris superior</text>
+                                    <line x1="98" y1="210" x2="160" y2="210" stroke="#1a1a2e" stroke-width="1" opacity="0.3"/>
+                                    
+                                    <text x="95" y="251" text-anchor="end">Orbicularis oris inferior</text>
+                                    <line x1="98" y1="248" x2="150" y2="248" stroke="#1a1a2e" stroke-width="1" opacity="0.3"/>
+                                    
+                                    <text x="305" y="251" text-anchor="start">Depressor labii inferioris</text>
+                                    <line x1="250" y1="248" x2="302" y2="248" stroke="#1a1a2e" stroke-width="1" opacity="0.3"/>
+                                    
+                                    <text x="200" y="315" text-anchor="middle">Platysma</text>
+                                    <line x1="200" y1="295" x2="200" y2="305" stroke="#1a1a2e" stroke-width="1" opacity="0.3"/>
                                 </g>
                             </svg>
                         </div>
@@ -161,6 +185,9 @@
         <!-- Our Story -->
         <section class="story" id="story" aria-labelledby="story-heading">
             <div class="container">
+                <div class="section-logo">
+                    <img src="logo.png" alt="" class="section-logo-img" aria-hidden="true">
+                </div>
                 <h2 id="story-heading" class="section-title">Our Story</h2>
                 
                 <div class="story-content">
@@ -307,6 +334,9 @@
         <!-- Technology Deep-Dive -->
         <section class="technology" id="technology" aria-labelledby="tech-heading">
             <div class="container">
+                <div class="section-logo">
+                    <img src="logo.png" alt="" class="section-logo-img" aria-hidden="true">
+                </div>
                 <h2 id="tech-heading" class="section-title">Our Technology</h2>
                 <p class="section-intro">7 prototype iterations. 35 testing sessions. 6 months of development.</p>
                 
@@ -458,23 +488,35 @@
 
                 <div class="advisors">
                     <h3>Research Advisors</h3>
+                    
+                    <!-- University Seals -->
+                    <div class="university-seals">
+                        <img src="images/uchiacgo-seal.png" alt="University of Chicago" class="university-seal">
+                        <img src="images/ucdavis-seal.png" alt="UC Davis" class="university-seal">
+                        <img src="images/nw-seal.png" alt="Northwestern University" class="university-seal">
+                    </div>
+                    
                     <div class="advisor-grid">
                         <div class="advisor">
+                            <img src="images/uchiacgo-seal.png" alt="" class="advisor-seal">
                             <span class="advisor-name">Dr. Nicholas Hatsopoulos</span>
                             <span class="advisor-affiliation">University of Chicago</span>
                             <span class="advisor-specialty">Motor Cortex BCIs</span>
                         </div>
                         <div class="advisor">
+                            <img src="images/ucdavis-seal.png" alt="" class="advisor-seal">
                             <span class="advisor-name">Dr. Sergey Stavisky</span>
                             <span class="advisor-affiliation">UC Davis</span>
                             <span class="advisor-specialty">2023 International BCI Award Winner</span>
                         </div>
                         <div class="advisor">
+                            <img src="images/uchiacgo-seal.png" alt="" class="advisor-seal">
                             <span class="advisor-name">Dr. Howard Nusbaum</span>
                             <span class="advisor-affiliation">UChicago Psychology</span>
                             <span class="advisor-specialty">Speech & Language</span>
                         </div>
                         <div class="advisor">
+                            <img src="images/nw-seal.png" alt="" class="advisor-seal">
                             <span class="advisor-name">Dr. Dina Simkin</span>
                             <span class="advisor-affiliation">Northwestern</span>
                             <span class="advisor-specialty">Clinical Neurology</span>
@@ -557,8 +599,8 @@
                 </div>
 
                 <div class="contact-cta">
-                    <a href="mailto:contact@vocl.tech" class="btn btn-primary btn-large">
-                        contact@vocl.tech
+                    <a href="mailto:vocl.speak@gmail.com" class="btn btn-primary btn-large">
+                        vocl.speak@gmail.com
                     </a>
                 </div>
             </div>

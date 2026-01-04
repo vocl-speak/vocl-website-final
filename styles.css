@@ -347,22 +347,31 @@ strong {
 
 /* Electrode animations */
 .electrode {
-    opacity: 0.6;
-    animation: pulse 2s ease-in-out infinite;
+    opacity: 0.7;
+    animation: electrode-pulse 2s ease-in-out infinite;
 }
 
 .electrode.e1 { animation-delay: 0s; }
-.electrode.e2 { animation-delay: 0.15s; }
-.electrode.e3 { animation-delay: 0.3s; }
-.electrode.e4 { animation-delay: 0.45s; }
-.electrode.e5 { animation-delay: 0.6s; }
-.electrode.e6 { animation-delay: 0.75s; }
-.electrode.e7 { animation-delay: 0.9s; }
-.electrode.e8 { animation-delay: 1.05s; }
+.electrode.e2 { animation-delay: 0.2s; }
+.electrode.e3 { animation-delay: 0.4s; }
+.electrode.e4 { animation-delay: 0.6s; }
+.electrode.e5 { animation-delay: 0.8s; }
+.electrode.e6 { animation-delay: 1.0s; }
 
-@keyframes pulse {
-    0%, 100% { opacity: 0.4; }
-    50% { opacity: 1; }
+@keyframes electrode-pulse {
+    0%, 100% { 
+        opacity: 0.5;
+        stroke-width: 2;
+    }
+    50% { 
+        opacity: 1;
+        stroke-width: 4;
+    }
+}
+
+.electrode-labels text {
+    font-family: var(--font-family);
+    font-weight: 500;
 }
 
 .signal {
@@ -448,6 +457,19 @@ strong {
     max-width: 700px;
     margin: 0 auto var(--space-3xl);
     font-size: var(--font-size-lg);
+}
+
+/* Section Logo Accent */
+.section-logo {
+    text-align: center;
+    margin-bottom: var(--space-lg);
+}
+
+.section-logo-img {
+    height: 40px;
+    width: auto;
+    opacity: 0.15;
+    display: inline-block;
 }
 
 /* Story Section */
@@ -901,6 +923,30 @@ strong {
     margin-bottom: var(--space-lg);
 }
 
+/* University Seals Row */
+.university-seals {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-3xl);
+    margin-bottom: var(--space-xl);
+    padding: var(--space-lg) 0;
+}
+
+.university-seal {
+    height: 80px;
+    width: auto;
+    opacity: 0.8;
+    filter: grayscale(20%);
+    transition: all var(--transition-base);
+}
+
+.university-seal:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: scale(1.05);
+}
+
 .advisor-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -916,7 +962,16 @@ strong {
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    align-items: center;
+    gap: 8px;
+}
+
+.advisor-seal {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    margin-bottom: var(--space-xs);
+    opacity: 0.9;
 }
 
 .advisor-name {
@@ -1177,6 +1232,14 @@ strong {
         grid-template-columns: repeat(2, 1fr);
     }
     
+    .university-seals {
+        gap: var(--space-xl);
+    }
+    
+    .university-seal {
+        height: 60px;
+    }
+    
     .validation-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1279,6 +1342,15 @@ strong {
     
     .advisor-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .university-seals {
+        flex-wrap: wrap;
+        gap: var(--space-lg);
+    }
+    
+    .university-seal {
+        height: 50px;
     }
     
     .validation-grid {
