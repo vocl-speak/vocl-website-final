@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="index-page">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=104">
 </head>
 <body>
     <!-- Navigation -->
@@ -70,83 +70,48 @@
                     </div>
                 </div>
                 <div class="hero-visual">
-                    <div class="product-showcase">
-                        <div class="device-illustration">
-                            <svg viewBox="0 0 450 400" class="device-svg" aria-hidden="true">
-                                <!-- 8-Channel Electrode Visualization -->
-                                <defs>
-                                    <linearGradient id="signalGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                                        <stop offset="0%" style="stop-color:#0066cc;stop-opacity:0.2" />
-                                        <stop offset="50%" style="stop-color:#0066cc;stop-opacity:1" />
-                                        <stop offset="100%" style="stop-color:#0066cc;stop-opacity:0.2" />
-                                    </linearGradient>
-                                    <filter id="glow">
-                                        <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-                                        <feMerge>
-                                            <feMergeNode in="coloredBlur"/>
-                                            <feMergeNode in="SourceGraphic"/>
-                                        </feMerge>
-                                    </filter>
-                                </defs>
-                                
-                                <!-- Head outline - side profile view -->
-                                <path d="M180 30 
-                                         C280 30 320 80 330 140
-                                         C340 180 335 220 320 260
-                                         C310 290 290 320 260 340
-                                         L220 360
-                                         L200 380
-                                         L200 400
-                                         L180 400
-                                         L180 380
-                                         L160 360
-                                         L140 340
-                                         C110 310 90 270 85 230
-                                         C80 180 90 130 120 90
-                                         C140 60 160 30 180 30Z" 
-                                      fill="none" stroke="#1a1a2e" stroke-width="2" opacity="0.2"/>
-                                
-                                <!-- 8 Electrode positions - all on same side of face -->
-                                <g class="electrodes" filter="url(#glow)">
-                                    <!-- Upper lip (2 electrodes) -->
-                                    <circle cx="240" cy="195" r="12" fill="#0066cc" class="electrode e1"/>
-                                    <circle cx="270" cy="190" r="12" fill="#0066cc" class="electrode e2"/>
-                                    
-                                    <!-- Lower lip (2 electrodes) -->
-                                    <circle cx="235" cy="225" r="12" fill="#0066cc" class="electrode e3"/>
-                                    <circle cx="265" cy="230" r="12" fill="#0066cc" class="electrode e4"/>
-                                    
-                                    <!-- Depressor labii inferioris / Chin (2 electrodes) -->
-                                    <circle cx="220" cy="270" r="12" fill="#0066cc" class="electrode e5"/>
-                                    <circle cx="250" cy="280" r="12" fill="#0066cc" class="electrode e6"/>
-                                    
-                                    <!-- Neck / Platysma (2 electrodes) -->
-                                    <circle cx="195" cy="340" r="12" fill="#0066cc" class="electrode e7"/>
-                                    <circle cx="210" cy="365" r="12" fill="#0066cc" class="electrode e8"/>
-                                </g>
-                                
-                                <!-- Signal waves -->
-                                <g class="signal-lines">
-                                    <path d="M285 195 Q310 195 325 180 Q340 165 355 185 Q370 205 385 185 Q400 165 420 185" 
-                                          fill="none" stroke="url(#signalGradient)" stroke-width="2.5" class="signal s1"/>
-                                    <path d="M280 230 Q305 230 320 215 Q335 200 350 220 Q365 240 380 220 Q395 200 420 220" 
-                                          fill="none" stroke="url(#signalGradient)" stroke-width="2.5" class="signal s2"/>
-                                    <path d="M265 280 Q290 280 305 265 Q320 250 335 270 Q350 290 365 270 Q380 250 405 270" 
-                                          fill="none" stroke="url(#signalGradient)" stroke-width="2.5" class="signal s3"/>
-                                    <path d="M230 365 Q255 365 270 350 Q285 335 300 355 Q315 375 330 355 Q345 335 370 355" 
-                                          fill="none" stroke="url(#signalGradient)" stroke-width="2.5" class="signal s4"/>
-                                </g>
-                                
-                                <!-- Labels -->
-                                <g class="electrode-labels" font-size="12" fill="#1a1a2e" opacity="0.7">
-                                    <text x="120" y="195">Upper lip (2)</text>
-                                    <text x="120" y="230">Lower lip (2)</text>
-                                    <text x="100" y="275">Chin (2)</text>
-                                    <text x="100" y="355">Neck (2)</text>
-                                </g>
-                            </svg>
+                    <div class="hero-logo-showcase">
+                        <img src="logo.png" alt="VOCL Logo" class="hero-logo-large">
+                    </div>
+                </div>
+                
+                <!-- University Banner -->
+                <div class="university-banner-hero">
+                    <p class="banner-text">Backed by researchers from</p>
+                    <div class="university-banner">
+                        <div class="university-logos-track">
+                            <div class="university-logo-item">
+                                <img src="images/uchiacgo-seal.png?v=2" alt="University of Chicago" class="university-logo" loading="lazy">
+                            </div>
+                            <div class="university-logo-item">
+                                <img src="images/ucdavis-seal.png?v=2" alt="UC Davis" class="university-logo" loading="lazy">
+                            </div>
+                            <div class="university-logo-item">
+                                <img src="images/nw-seal.png?v=2" alt="Northwestern University" class="university-logo" loading="lazy">
+                            </div>
+                            <div class="university-logo-item">
+                                <img src="images/ucsf-seal.png?v=3" alt="UCSF" class="university-logo" loading="lazy">
+                            </div>
+                            <div class="university-logo-item">
+                                <img src="images/stanford-seal.png?v=7" alt="Stanford University" class="university-logo" loading="lazy">
+                            </div>
+                            <!-- Duplicate for seamless loop -->
+                            <div class="university-logo-item">
+                                <img src="images/uchiacgo-seal.png?v=2" alt="University of Chicago" class="university-logo" loading="lazy">
+                            </div>
+                            <div class="university-logo-item">
+                                <img src="images/ucdavis-seal.png?v=2" alt="UC Davis" class="university-logo" loading="lazy">
+                            </div>
+                            <div class="university-logo-item">
+                                <img src="images/nw-seal.png?v=2" alt="Northwestern University" class="university-logo" loading="lazy">
+                            </div>
+                            <div class="university-logo-item">
+                                <img src="images/ucsf-seal.png?v=3" alt="UCSF" class="university-logo" loading="lazy">
+                            </div>
+                            <div class="university-logo-item">
+                                <img src="images/stanford-seal.png?v=7" alt="Stanford University" class="university-logo" loading="lazy">
+                            </div>
                         </div>
-                        <p class="device-caption">8-channel EMG electrode placement</p>
                     </div>
                 </div>
             </div>
@@ -171,6 +136,69 @@
                         <div class="stat">
                             <span class="stat-number">30K</span>
                             <span class="stat-label">with ALS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Flowchart -->
+        <section class="process-flowchart-section">
+            <div class="container">
+                <div class="process-flowchart">
+                    <h3>The VOCL Process</h3>
+                    <div class="flowchart-container">
+                        <div class="flowchart-step">
+                            <div class="flowchart-box">
+                                <div class="flowchart-number">1</div>
+                                <h4>User Attempts Speech</h4>
+                                <p>User thinks about speaking or attempts to vocalize</p>
+                            </div>
+                        </div>
+                        <div class="flowchart-arrow">→</div>
+                        
+                        <div class="flowchart-step">
+                            <div class="flowchart-box">
+                                <div class="flowchart-number">2</div>
+                                <h4>EMG Signal Capture</h4>
+                                <p>8 electrodes detect microvolt signals from facial muscles</p>
+                            </div>
+                        </div>
+                        <div class="flowchart-arrow">→</div>
+                        
+                        <div class="flowchart-step">
+                            <div class="flowchart-box">
+                                <div class="flowchart-number">3</div>
+                                <h4>Signal Processing</h4>
+                                <p>Filtering, ICA, and PCA-LDA reduce noise and extract features</p>
+                            </div>
+                        </div>
+                        <div class="flowchart-arrow">→</div>
+                        
+                        <div class="flowchart-step">
+                            <div class="flowchart-box">
+                                <div class="flowchart-number">4</div>
+                                <h4>AI Decoding</h4>
+                                <p>CNN-LSTM model classifies phonemes and predicts words</p>
+                            </div>
+                        </div>
+                        <div class="flowchart-arrow">→</div>
+                        
+                        <div class="flowchart-step">
+                            <div class="flowchart-box">
+                                <div class="flowchart-number">5</div>
+                                <h4>LLM Enhancement</h4>
+                                <p>Context-aware error correction produces natural output</p>
+                            </div>
+                        </div>
+                        <div class="flowchart-arrow">→</div>
+                        
+                        <div class="flowchart-step">
+                            <div class="flowchart-box flowchart-final">
+                                <div class="flowchart-number">6</div>
+                                <h4>Speech Output</h4>
+                                <p>Text or synthesized speech delivered in under 300ms</p>
+                            </div>
                         </div>
                     </div>
                 </div>

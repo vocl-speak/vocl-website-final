@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=102">
 </head>
 <body>
     <!-- Navigation -->
@@ -126,6 +126,92 @@
                         <div class="condition-card">
                             <h3>Dysarthria & Aphasia</h3>
                             <p>Progressive conditions affecting speech muscle control—from Parkinson's to MS—where the brain's speech commands remain intact but neuromuscular execution fails.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Principal Component Analysis Exhibits -->
+                <div class="exhibits-section">
+                    <h2>Scientific Validation</h2>
+                    <p class="section-intro">Neural pattern consistency across attempted speech and silent conditions.</p>
+                    
+                    <!-- PC1 Correlation Analysis -->
+                    <div class="exhibit-card">
+                        <div class="exhibit-content">
+                            <div class="exhibit-image">
+                                <img src="images/pc1_correlation.png" alt="PC1 Correlation Analysis" class="exhibit-img">
+                            </div>
+                            <div class="exhibit-text">
+                                <h3>PC1 Correlation Analysis</h3>
+                                <p class="exhibit-stat"><strong>PC1 Correlation (r = 0.84)</strong></p>
+                                
+                                <!-- TLDR Section -->
+                                <div class="exhibit-tldr">
+                                    <h4>TL;DR</h4>
+                                    <p>When people attempt to speak (even silently), their brain shows the same patterns whether they vocalize or not. This correlation of 0.84 means the neural signals are nearly identical—proving VOCL can decode speech without requiring actual vocalization.</p>
+                                </div>
+
+                                <!-- In-Depth Explanation -->
+                                <details class="exhibit-detailed">
+                                    <summary><h4>In-Depth Analysis</h4></summary>
+                                    <div class="exhibit-detailed-content">
+                                        <p>Principal Component Analysis (PCA) is a dimensionality reduction technique that identifies the most significant patterns in complex neural data. Principal Component 1 (PC1) represents the dominant source of variance—essentially capturing the primary neural signal driving the observed brain activity.</p>
+                                        
+                                        <p>In this analysis, we compared PC1 values extracted from EEG recordings during two conditions: (1) attempted speech with vocalization, and (2) silent subvocalization (attempted speech without sound). The Pearson correlation coefficient of <strong>r = 0.84</strong> indicates a strong positive linear relationship between these conditions.</p>
+                                        
+                                        <p>This finding is significant because it demonstrates that the neural mechanisms underlying speech production remain consistent regardless of whether motor execution (vocal cord activation) occurs. The brain generates similar activation patterns whether the user produces audible speech or merely attempts to speak silently—validating the core principle behind VOCL's non-invasive approach.</p>
+                                        
+                                        <div class="exhibit-findings">
+                                            <h4>Key Findings:</h4>
+                                            <ul>
+                                                <li><strong>PC1 captures dominant brain activity:</strong> The first principal component accounts for the largest proportion of variance in neural signals, representing the primary cognitive-motor pathway involved in speech planning and execution.</li>
+                                                <li><strong>Synchronous activation:</strong> PC1 activity increases synchronously in both vocalized and silent conditions, indicating that the neural command structure is preserved even when motor output is suppressed.</li>
+                                                <li><strong>Pattern consistency:</strong> Neural patterns remain consistent across conditions, suggesting that speech intent can be decoded from brain signals alone, without requiring actual vocalization—a critical finding for non-invasive assistive technology.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PC1 Timeseries Analysis -->
+                    <div class="exhibit-card">
+                        <div class="exhibit-content">
+                            <div class="exhibit-image">
+                                <img src="images/pc1_timeseries.png" alt="PC1 Timeseries Analysis" class="exhibit-img">
+                            </div>
+                            <div class="exhibit-text">
+                                <h3>PC1 Timeseries Analysis</h3>
+                                <p class="exhibit-stat"><strong>Temporal Dynamics</strong></p>
+                                
+                                <!-- TLDR Section -->
+                                <div class="exhibit-tldr">
+                                    <h4>TL;DR</h4>
+                                    <p>Over time, brain signals follow the same trajectory whether someone speaks aloud or silently. This temporal consistency proves that VOCL can reliably track speech patterns in real-time, making continuous communication possible.</p>
+                                </div>
+
+                                <!-- In-Depth Explanation -->
+                                <details class="exhibit-detailed">
+                                    <summary><h4>In-Depth Analysis</h4></summary>
+                                    <div class="exhibit-detailed-content">
+                                        <p>While correlation analysis reveals the relationship between conditions at a single point in time, timeseries analysis examines how neural signals evolve dynamically throughout the speech production process. This temporal perspective is crucial for understanding whether neural patterns remain consistent not just in magnitude, but also in their sequence and timing.</p>
+                                        
+                                        <p>The timeseries visualization plots PC1 values as a function of time, comparing the temporal evolution of neural activity during attempted speech (with vocalization) versus silent subvocalization. The overlapping trajectories demonstrate that both conditions follow remarkably similar temporal patterns—the signals rise and fall in near-perfect synchrony.</p>
+                                        
+                                        <p>This temporal consistency has profound implications for real-world application. It suggests that VOCL can decode speech intent continuously, tracking the user's neural activity as they form words and sentences in real-time. The stability of these patterns across conditions indicates that the system can maintain accuracy even when users cannot produce audible speech—exactly the scenario faced by individuals with ALS, dysarthria, or other speech-impairing conditions.</p>
+                                        
+                                        <div class="exhibit-findings">
+                                            <h4>Implications:</h4>
+                                            <ul>
+                                                <li><strong>Signal stability:</strong> Neural signals remain stable and predictable across both vocalized and silent conditions, enabling reliable decoding algorithms that don't depend on motor execution.</li>
+                                                <li><strong>Temporal validation:</strong> The consistent temporal patterns validate the correlation findings, demonstrating that the relationship holds not just statistically, but dynamically throughout the speech production process.</li>
+                                                <li><strong>Real-time feasibility:</strong> The predictable temporal structure supports the feasibility of real-time, non-invasive speech decoding, making continuous communication possible for users who cannot vocalize.</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </details>
+                            </div>
                         </div>
                     </div>
                 </div>
