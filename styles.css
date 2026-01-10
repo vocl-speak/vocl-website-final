@@ -1630,7 +1630,6 @@ strong {
     height: 48px;
     width: auto;
     margin-bottom: var(--space-md);
-    filter: brightness(0) invert(1);
     border-radius: 8px;
 }
 
