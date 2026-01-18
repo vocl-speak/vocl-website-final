@@ -2546,6 +2546,51 @@ model-viewer {
     line-height: var(--line-height-relaxed);
 }
 
+/* Demo Wake Up Note */
+.demo-wakeup-note {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: var(--space-lg);
+    margin-bottom: var(--space-lg);
+    text-align: center;
+}
+
+.demo-wakeup-note p {
+    font-size: var(--font-size-base);
+    color: rgba(255, 255, 255, 0.9);
+    line-height: var(--line-height-relaxed);
+    margin: 0;
+    text-align: center;
+}
+
+.wake-up-btn {
+    background: var(--color-accent);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: var(--font-size-sm);
+    font-weight: 600;
+    font-family: var(--font-family);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    box-shadow: 0 2px 8px rgba(0, 102, 204, 0.3);
+    margin-left: var(--space-xs);
+}
+
+.wake-up-btn:hover {
+    background: var(--color-accent-light);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 102, 204, 0.4);
+}
+
+.wake-up-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 102, 204, 0.3);
+}
+
 /* Hero Full Height */
 .hero-full {
     min-height: auto;
@@ -2572,6 +2617,7 @@ model-viewer {
     .demo-info-row {
         grid-template-columns: 1fr;
     }
+    
     
     .demo-iframe-full {
         height: 60vh;
